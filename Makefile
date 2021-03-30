@@ -1,4 +1,4 @@
-OBJECTS = Game.cpp
+OBJECTS = src/Game.cpp
 
 CC = g++
 

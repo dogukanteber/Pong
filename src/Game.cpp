@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ncurses.h>
-#include "include/Paddle.hpp"
-#include "include/Ball.hpp"
+#include "../include/Paddle.hpp"
+#include "../include/Ball.hpp"
 
 const int SCREEN_WIDTH = 80;
 const int SCREEN_HEIGHT = 24;
