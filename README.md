@@ -1,7 +1,7 @@
 # Pong
 
 Pong clone, written in C++ and used nCurses library.
-![Alt Text](screenshots/gameplay.gif)
+![Game Play GIF](.github/gameplay.gif)
 
 ## Disclamier
 This project is written on Linux operating system and has not been tested on any other operating system.
