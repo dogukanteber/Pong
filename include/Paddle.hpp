@@ -15,8 +15,8 @@ class Paddle {
 		inline int getInitialY() const { return initialY; }
 		inline bool getTurn() const { return turn; }
 		inline int getScore() const { return score; }
-		inline void setX(const int &x) { this->x = x; }
-		inline void setY(const int &y) { this->y = y; }
+		inline void setX(const int x) { this->x = x; }
+		inline void setY(const int y) { this->y = y; }
 		inline void setTurn(const bool &turn) { this->turn = turn; }
 		inline void setScore(const int &score) { this->score = score; }
 		void draw() const;
@@ -24,8 +24,8 @@ class Paddle {
 		inline void moveDown() { y++; }
 		void reset();
 	private:
-		int initialX, initialY;
-		int x,y;
+		int y, x;
+		int initialY, initialX;
 		bool turn;
 		int score;
 };
@@ -34,13 +34,13 @@ class Paddle {
 /*
 	The reason why we subtract PADDLE_LENGTH/2 is to adjust	the paddles right at the middle
 */
-Paddle::Paddle(int y, int x) {
-	this->x = x - PADDLE_LENGTH / 2;
-	this->y = y - PADDLE_LENGTH / 2;
-	initialX = x - PADDLE_LENGTH / 2;
-	initialY = y - PADDLE_LENGTH / 2;
-	score = 0;
-	turn = false;
+Paddle::Paddle(int y, int x) : 
+		y(y - PADDLE_LENGTH / 2),
+		x(x - PADDLE_LENGTH / 2),
+		initialY(y - PADDLE_LENGTH / 2),
+		initialX(x - PADDLE_LENGTH / 2),
+		turn(false),
+		score(0) {
 }
 
 void Paddle::draw() const {

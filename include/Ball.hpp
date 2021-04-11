@@ -20,27 +20,27 @@ class Ball {
 		inline int getX() const { return x; }
 		inline int getSpeed() const { return speed; }
 		inline Direction getDirection() const { return direction; }
-		inline void setY(const int &x) { this->y = y; }
-		inline void setX(const int &x) { this->x = x; }
-		inline void setDirection(const Direction &direction) { this->direction = direction; }
+		inline void setY(const int x) { this->y = y; }
+		inline void setX(const int x) { this->x = x; }
+		inline void setDirection(const Direction direction) { this->direction = direction; }
 		void draw() const;
 		void move();;
 		void setRandomDirection();
 		void setProperties(int, int, Direction);
 	private:
-		int initialX, initialY;
-		int x,y;
+		int y, x;
+		int initialY, initialX;
 		int speed;
 		Direction direction;
 };
 
-Ball::Ball(int y,int x, int speed) {
-	this->y = y;
-	this->x = x;
-	initialY = y;
-	initialX = x;
-	this->speed = speed;
-	direction = NONE;
+Ball::Ball(int y,int x, int speed) : 
+	y(y), 
+	x(x), 
+	initialY(y), 
+	initialX(x), 
+	speed(speed), 
+	direction(NONE) {
 }
 
 
